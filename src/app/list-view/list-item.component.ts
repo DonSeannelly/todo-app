@@ -1,5 +1,4 @@
 import { Component, Input, Output, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { ToDoService } from '../resources/services/to-do.service';
 import { ListObject } from '../list-object';
 import { EventEmitter } from 'selenium-webdriver';
@@ -11,7 +10,7 @@ import { EventEmitter } from 'selenium-webdriver';
 })
 export class ListItemComponent implements OnInit {
 
-  constructor(private router: Router, private service: ToDoService) { }
+  constructor(private service: ToDoService) { }
 
   @Input() listobject: ListObject;
   @Input() index: number;
