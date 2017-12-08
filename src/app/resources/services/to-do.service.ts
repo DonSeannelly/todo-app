@@ -5,4 +5,11 @@ export class ToDoService {
 
   constructor() { }
 
+  deleteList() {
+
+  }
+
+  getList() {
+
+  }
 }

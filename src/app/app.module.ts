@@ -18,6 +18,7 @@ import { InMemoryDataService } from './resources/services/in-memory-data.service
 import { AppComponent } from './app.component';
 import { ListViewComponent } from './list-view/list-view.component';
 import { HomeViewComponent } from './home-view/home-view.component';
+import { TodoDescriptionComponent } from './todo-description/todo-description.component';
 
 
 
@@ -25,7 +26,8 @@ import { HomeViewComponent } from './home-view/home-view.component';
   declarations: [
     AppComponent,
     ListViewComponent,
-    HomeViewComponent
+    HomeViewComponent,
+    TodoDescriptionComponent
   ],
   imports: [
     BrowserModule,

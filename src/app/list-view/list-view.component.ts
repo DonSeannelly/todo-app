@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ToDoItem } from '../modules/todo-item';
+import { TodoDescription } from '../todo-description/todo-description.component';
 
 @Component({
   selector: 'app-list-view',
@@ -6,10 +8,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-view.component.css']
 })
 export class ListViewComponent implements OnInit {
+  todos: ToDoItem[];
+  title: string;
+  showDescription: boolean;
 
-  constructor() { }
+  constructor() {
+    this.showDescription = false;
+    this.title = 'Test';
 
-  ngOnInit() {
+    this.todos = [
+      {
+        name: 'todo1',
+        description: 'todo1desc',
+        completed: false
+      },
+      {
+        name: 'todo2',
+        description: 'todo2desc',
+        completed: true
+      }
+    ];
   }
 
+  ngOnInit() {
+
+  }
 }
