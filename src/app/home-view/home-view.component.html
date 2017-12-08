@@ -13,7 +13,7 @@
     </div>
   </div>
   <div *ngFor="let todo of list;" class="todo-list button" routerLink="/listview/{{ todo.id }}">
-    <span>{{ todo.id }}</span>
+    <span>{{ todo.title }}</span>
   </div>
 </div>
 

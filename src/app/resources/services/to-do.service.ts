@@ -11,6 +11,22 @@ export class ToDoService {
 
   constructor(private http: Http) { }
 
+  async createList(title: string, id: string): Promise<Array<ToDoItem>> {
+    let newList: ListObject = {
+      id: id,
+      title: title,
+      items: [],
+    }
+
+    await this.http.put(this.todoURL + `/${id}`, JSON.stringify(newList), { headers: this.headers })
+      .toPromise()
+      .then((response) => response.json() as void)
+      .catch(this.handleError)
+
+    return this.getLists();
+
+  }
+
   getLists(): Promise<Array<ToDoItem>> {
     return this.http.get(this.todoURL, { headers: this.headers })
       .toPromise()

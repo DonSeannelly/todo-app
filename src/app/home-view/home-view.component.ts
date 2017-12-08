@@ -23,8 +23,9 @@ export class HomeViewComponent implements OnInit {
     this.list = await this.toDoService.getLists();
   }
 
-  openModal() {
-    //$('#myModal').toggle();
+  private async createList(title: string) {
+    let id = this.list.length + 1;
+    this.list = await this.toDoService.createList(title, `${id}`);
   }
 
 }
