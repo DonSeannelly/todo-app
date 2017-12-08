@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { ListViewComponent } from './list-view/list-view.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListViewComponent
   ],
   imports: [
     BrowserModule
