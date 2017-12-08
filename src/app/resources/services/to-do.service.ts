@@ -5,7 +5,7 @@ import { ToDoItem } from '../../models/todo-item';
 @Injectable()
 export class ToDoService {
 
-  private todoURL: string = '/todos';
+  private todoURL: string = 'api/todos';
   private headers: Headers = new Headers({ 'Content-Type': 'application/json' });
 
   constructor(private http: Http) { }
