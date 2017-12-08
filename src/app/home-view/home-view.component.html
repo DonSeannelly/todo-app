@@ -29,11 +29,11 @@
       </div>
       <div class="modal-body">
         <form>
-          <input type = "text" name = "title" class = "form-control" placeholder="Enter title">
+          <input #formData type="text" name="title" class="form-control" placeholder="Enter title">
         </form>
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="createList(formData.value)">Save</button>
       </div>
     </div>
 
