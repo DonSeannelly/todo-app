@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToDoItem } from '../models/todo-item';
-import { TodoDescription } from '../todo-description/todo-description.component';
+import { TodoDescriptionComponent } from '../todo-description/todo-description.component';
 
 @Component({
   selector: 'app-list-view',
