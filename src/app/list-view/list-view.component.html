@@ -1,24 +1,25 @@
 <div>
-  <div>
-    <button class="header">
+  <div *ngIf="todos">
+    <button routerLink="/home" class="header">
       <
     </button>
-    <h1 class="header" contenteditable="true">Title</h1>
-    <button class="header">
+    <h1 #test class="header" contenteditable="true" (blur)="title=test.innerText">{{ title }}</h1>
+    <button routerLink="" class="header">
       +
     </button>
   </div>
 
   <form>
-    <div>
-      <input type="checkbox" id="checkComplete">
-      <label for="checkComplete">Test1</label>
+    <div *ngFor="let t of todos; let i = index">
+      <input type="checkbox" id="checkComplete" [checked]="t.completed" (change)="t.completed = !t.completed">
+      <label for="checkComplete">{{ t.name }}</label>
       <button>
         -
       </button>
-      <button>
-        v
-      </button>
+
+      <app-todo-description>
+
+      </app-todo-description>
     </div>
   </form>
 
