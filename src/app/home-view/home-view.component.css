@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+.container {
+  padding: 1em;
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.plus {
+  float: right;
+}
+
+.todo-list {
+  display: flex;
+  justify-content: center;
+  background-color: rebeccapurple;
+  color: #FFF;
+  padding: 1em;
+  width: 50%;
+  margin: 1em auto;
+}
+
+.todo-list:hover {
+  cursor: pointer;
+  opacity: .8;
+  -webkit-transition: opacity .3s ease-in;
+  -moz-transition: opacity .3s ease-in;
+  transition: opacity .3s ease-in;
+}
+
+.todo-list:active {
+  opacity: .3;
+=======
 .header{
     text-align: center;
     font: 20px arial, sans-serif;
@@ -9,4 +45,5 @@
     padding: 25px;
     margin: auto;
 
+>>>>>>> 972802421f13b8b4efb3b55b166860baa86b1e6f
 }
