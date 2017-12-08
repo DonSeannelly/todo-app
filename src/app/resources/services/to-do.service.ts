@@ -21,5 +21,4 @@ export class ToDoService {
     console.error(`There was an error processing this request. Error: ${error}`); //Dev Purposes only
     return Promise.reject(error.message || error);
   }
-
 }
