@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+.button:hover {
+  cursor: pointer;
+  opacity: .8;
+  -webkit-transition: opacity .3s ease-in;
+  -moz-transition: opacity .3s ease-in;
+  transition: opacity .3s ease-in;
+}
+
+.button:active {
+  opacity: .3;
+}
