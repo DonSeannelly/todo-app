@@ -1,3 +1,20 @@
-.header {
+.listitem {
+  margin: auto;
+  text-align: center;
+}
+
+.viewtitle {
+  font-weight: bold;
+  font-size: 1.8em;
+}
+
+header {
   display: inline;
+  color: green;
+
+}
+
+textarea {
+  width: 250;
+  height: 200;
 }

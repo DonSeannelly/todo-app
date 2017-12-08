@@ -1,13 +1,19 @@
-<div>
-  <button class="back-button" (click)="updatedItem.emit()">&lt;</button>
-  <header>
+<div class="listitem">
+  <div class="tobbar">
+    <button class="back-button" (click)="updatedItem.emit()">&lt;</button>
+    <span class="viewtitle">List Item</span>
+  </div>
+  <label>
     Name
-  </header>
+    <input [(ngModel)]="listobject.items[index].name" />
+  </label>
+  <input type="checkbox" [(ngModel)]="listobject.items[index].done" />
   <br>
-  <input [(ngModel)]="listobject.items[index].name"/>
-  <input type="checkbox" [(ngModel)]="listobject.items[index].done"/>
-  <br>
-  <textarea [(ngModel)]="listobject.items[index].text"></textarea>
+  <label>
+    Description
+    <br>
+    <textarea [(ngModel)]="listobject.items[index].text"></textarea>
+  </label>
   <br>
   <button class="update-button" (click)="updateList()">Submit</button>
 </div>
