@@ -1,18 +1,19 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { ToDoItem } from '../../models/todo-item';
+import { ListObject } from '../../models/list-object';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const todos: ToDoItem[] = [
+    const todos: ListObject[] = [
       {
-        name: 'test',
-        description: 'guyijok',
-        completed: false,
+        id: '1',
+        title: 'Test List',
+        items: []
       },
       {
-        name: 'test2',
-        description: 'guyijok',
-        completed: false,
-      }
+        id: '2',
+        title: 'Test List 2',
+        items: []
+      },
     ];
     return { todos };
   }
