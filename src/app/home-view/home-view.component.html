@@ -7,13 +7,13 @@
       </h1>
     </div>
     <div>
-      <h1 (click)="openModal()" class="plus button">
+      <h1 class="plus button" data-toggle="modal" data-target="#myModal">
         +
       </h1>
     </div>
   </div>
-  <div *ngFor="let todo of list;" class="todo-list button" routerLink="/listView/{{ todo.id }}">
-    <span>{{ todo.title }}</span>
+  <div *ngFor="let todo of list;" class="todo-list button" routerLink="/listview/{{ todo.id }}">
+    <span>{{ todo.id }}</span>
   </div>
 </div>
 
