@@ -20,6 +20,7 @@ export class ListItemComponent implements OnInit {
 
   }
   updateList = function() {
-    this.updatedItem.emit(this.service.updateList(this.listobject));
+    this.service.updateList(this.listobject)
+        .then((newobject) => { this.updatedItem.emit(newobject); });
   };
 }

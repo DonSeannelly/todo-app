@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import { ToDoItem } from '../../modules/todo-item';
+import {ListObject} from '../../list-object';
 @Injectable()
 export class ToDoService {
 
@@ -15,6 +16,10 @@ export class ToDoService {
       .toPromise()
       .then((response) => response.json() as Array<ToDoItem>)
       .catch(this.handleError);
+  }
+
+  updateList(listobject: ListObject): Promise<ListObject> {
+    return Promise.resolve(listobject);
   }
 
   private handleError(error: any): Promise<any> {
