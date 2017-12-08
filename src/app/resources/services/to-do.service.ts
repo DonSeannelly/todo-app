@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
-import { ToDoItem } from '../../modules/todo-item';
+import { ToDoItem } from '../../models/todo-item';
 import { ListObject } from '../../list-object';
 @Injectable()
 export class ToDoService {
