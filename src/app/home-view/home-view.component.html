@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="container">
   <div class="header">
     <div></div>
@@ -8,13 +7,13 @@
       </h1>
     </div>
     <div>
-      <h1 (click)="openModal()" class="plus button">
+      <h1 class="plus button" data-toggle="modal" data-target="#myModal">
         +
       </h1>
     </div>
   </div>
-  <div *ngFor="let todo of list;" class="todo-list button" routerLink="/listView/{{ todo.id }}">
-    <span>{{ todo.name }}</span>
+  <div *ngFor="let todo of list;" class="todo-list button" routerLink="/listview/{{ todo.id }}">
+    <span>{{ todo.id }}</span>
   </div>
 </div>
 
@@ -38,13 +37,3 @@
 
   </div>
 </div>
-=======
-
-<div class = "header">
-  <h1>
-    Home
-  </h1>
-
-</div>
-
->>>>>>> 972802421f13b8b4efb3b55b166860baa86b1e6f

@@ -5,8 +5,8 @@ import { HomeViewComponent } from './home-view/home-view.component';
 
 export const router: Routes = [
     // ADD ROUTES TO COMPONENTS HERE
-    { path: 'listview/:id', component: ListViewComponent },
     { path: '', component: HomeViewComponent },
+    { path: 'listview/:id', component: ListViewComponent },
     { path: '**', redirectTo: '' },
 ];
 

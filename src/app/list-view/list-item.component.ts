@@ -1,6 +1,6 @@
 import { Component, Input, Output, OnInit } from '@angular/core';
 import { ToDoService } from '../resources/services/to-do.service';
-import { ListObject } from '../list-object';
+import { ListObject } from '../models/list-object';
 import { EventEmitter } from 'selenium-webdriver';
 
 @Component({
@@ -19,8 +19,8 @@ export class ListItemComponent implements OnInit {
   ngOnInit() {
 
   }
-  updateList = function() {
+  updateList = function () {
     this.service.updateList(this.listobject)
-        .then((newobject) => { this.updatedItem.emit(newobject); });
+      .then((newobject) => { this.updatedItem.emit(newobject); });
   };
 }

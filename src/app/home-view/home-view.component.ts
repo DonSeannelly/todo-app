@@ -24,7 +24,7 @@ export class HomeViewComponent implements OnInit {
   }
 
   openModal() {
-    (<any>$('#myModal')).modal();
+    //$('#myModal').toggle();
   }
 
 }
