@@ -1,12 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
-<<<<<<< HEAD
 import { ToDoItem } from '../../modules/todo-item';
-import {ListObject} from '../../list-object';
-=======
-import { ToDoItem } from '../../models/todo-item';
->>>>>>> 98f41de323bce433f752ac71872b8da932439af7
+import { ListObject } from '../../list-object';
 @Injectable()
 export class ToDoService {
 
@@ -23,7 +19,12 @@ export class ToDoService {
   }
 
   updateList(listobject: ListObject): Promise<ListObject> {
-    return Promise.resolve(listobject);
+    return this.http.put(
+      this.todoURL + '/' + listobject.id,
+      JSON.stringify(listobject)
+    ).toPromise()
+      .then((response) => response.json() as ListObject)
+      .catch(this.handleError);
   }
 
   private handleError(error: any): Promise<any> {
