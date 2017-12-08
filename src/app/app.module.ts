@@ -17,13 +17,15 @@ import { InMemoryDataService } from './resources/services/in-memory-data.service
 // Components
 import { AppComponent } from './app.component';
 import { ListViewComponent } from './list-view/list-view.component';
+import { HomeViewComponent } from './home-view/home-view.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListViewComponent
+    ListViewComponent,
+    HomeViewComponent
   ],
   imports: [
     BrowserModule,
