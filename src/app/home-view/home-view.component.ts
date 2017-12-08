@@ -12,7 +12,7 @@ export class HomeViewComponent implements OnInit {
   list: ToDoItem[]; //this is a list property that returns an array of lists that it acquires from a service
 
 
-  constructor(private toDoService :ToDoService) { }
+  constructor(private toDoService: ToDoService) { }
 
 
 
@@ -20,6 +20,6 @@ export class HomeViewComponent implements OnInit {
   }
   fetchToDos() {
     this.toDoService.getLists();
-  }  
+  }
 
 }

@@ -1,3 +1,12 @@
 .header{
     text-align: center;
+    font: 20px arial, sans-serif;
+}
+
+.list{
+    width: 200px;
+    border: 2px solid black;
+    padding: 25px;
+    margin: auto;
+
 }
