@@ -9,6 +9,7 @@ import { routes } from './app.routes';
 
 //Other
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // Services
 import { ToDoService } from './resources/services/to-do.service';
@@ -34,6 +35,7 @@ import { TodoDescriptionComponent } from './todo-description/todo-description.co
     FormsModule,
     HttpModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService),
+    NgbModule.forRoot(),
     routes
   ],
   providers: [

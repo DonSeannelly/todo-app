@@ -1,0 +1,13 @@
+<div>
+  <a routerLink="/"><button class="back-button">&lt;</button></a>
+  <header>
+    Name
+  </header>
+  <br>
+  <input [(ngModel)]="listobject.items[index].name"/>
+  <input type="checkbox" [(ngModel)]="listobject.items[index].done"/>
+  <br>
+  <textarea [(ngModel)]="listobject.items[index].text"></textarea>
+  <br>
+  <button class="update-button" (click)="updateList()">Submit</button>
+</div>
