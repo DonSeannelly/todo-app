@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ToDoItem } from '../models/todo-item';
-import { TodoDescription } from '../todo-description/todo-description.component';
+import { TodoDescriptionComponent } from '../todo-description/todo-description.component';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
