@@ -34,6 +34,12 @@ export class ToDoService {
       .catch(this.handleError);
   }
 
+  getList(id: string) {
+    return this.http.get(this.todoURL + '/' + id).toPromise().then((id)=>{
+      return id.json();
+    }).catch(this.handleError);
+  }
+
   updateList(listobject: ListObject): Promise<ListObject> {
     return this.http.put(
       this.todoURL + '/' + listobject.id,
@@ -46,5 +52,10 @@ export class ToDoService {
   private handleError(error: any): Promise<any> {
     console.error(`There was an error processing this request. Error: ${error}`); //Dev Purposes only
     return Promise.reject(error.message || error);
+  }
+
+  deleteList(listObjectID: string) {
+    return this.http.delete(this.todoURL + `/${listObjectID}`).toPromise().then(response=> response.json)
+    .catch(this.handleError);
   }
 }

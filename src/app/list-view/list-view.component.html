@@ -1,18 +1,18 @@
-<div>
-  <div *ngIf="todos">
+<div *ngIf="list">
+  <div>
     <button routerLink="/home" class="header">
       <
     </button>
-    <h1 #test class="header" contenteditable="true" (blur)="title=test.innerText">{{ title }}</h1>
-    <button routerLink="" class="header">
+    <h1 #test class="header">{{ list.title }}</h1>
+    <button class="header" (click)="addtodo()">
       +
     </button>
   </div>
 
   <form>
-    <div *ngFor="let t of todos; let i = index">
+    <div *ngFor="let t of list.items; let i = index">
       <input type="checkbox" id="checkComplete" [checked]="t.completed" (change)="t.completed = !t.completed">
-      <label for="checkComplete">{{ t.name }}</label>
+      <label for="checkComplete" (click)="activetodo=t">{{ t.name }}</label>
       <button>
         -
       </button>
@@ -23,7 +23,10 @@
     </div>
   </form>
 
-  <button>
+  <button (click)="delete()">
     Delete
   </button>
 </div>
+<app-todoview *ngIf="activetodo" [todo]="activetodo" (delete)="deletetodo()" (save)="save($event)">
+
+</app-todoview>

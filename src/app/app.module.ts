@@ -20,6 +20,7 @@ import { AppComponent } from './app.component';
 import { ListViewComponent } from './list-view/list-view.component';
 import { HomeViewComponent } from './home-view/home-view.component';
 import { TodoDescriptionComponent } from './todo-description/todo-description.component';
+import { TodoviewComponent } from './todoview/todoview.component';
 
 
 
@@ -28,7 +29,8 @@ import { TodoDescriptionComponent } from './todo-description/todo-description.co
     AppComponent,
     ListViewComponent,
     HomeViewComponent,
-    TodoDescriptionComponent
+    TodoDescriptionComponent,
+    TodoviewComponent
   ],
   imports: [
     BrowserModule,
